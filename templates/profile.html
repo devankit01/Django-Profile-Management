@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<style type="text/css">
+		.main{
+			margin: 100px auto;
+			/*text-align: center;*/
+			width: 450px;
+			height: 330px;
+			background-color: tomato;
+			padding: 20px 30px;
+					}
+			.main-child{
+				float: left;
+			}
+			.main-child-2{
+				float: right;
+			}
+			h2{
+				margin-bottom: 50px;
+			}
+			a{
+				color: #000;
+			}
+	</style>
+</head>
+<body>
+<div class="main">
+<h2>Profile</h2>
+<div class="main-child">
+<img src="{{ data.profile }}" width="150px" height="150px" alt="" style="border-radius: 50%;">
+</div>
+<div class="main-child-2">
+
+{{ data.username }}<br><br>
+{{ data.name }}<br><br>
+{{ data.email }}<br><br>
+{{ data.phone }}<br><br>
+{{ data.occupation }}<br><br>
+<a href="/edit_pass">Change Password</a>
+<a href="/logout">Logout</a>
+</div>
+</div>
+</body>
+</html>

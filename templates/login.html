@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+		}
+		.main{
+			text-align: center;
+			width: 330px;
+			height: 280px;
+			margin: 100px auto;
+			background :tomato;
+			padding: 10px 20px;
+			box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+		}
+		input{
+			width: 260px;
+			height: 25px;
+			background-color: transparent;
+			border:none;
+			border-bottom: 1.5px solid #000;
+			color: black;
+			outline: none;
+
+
+		}
+		input::placeholder{
+			color: #000;
+		}
+		input[type="submit"]{
+			border:2px solid black;
+			width: 160px;
+			height: 35px;
+			border-radius: 15px;
+			margin-top: 10px;
+		}
+		a{
+			color: #000;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+<h2>Login</h2>
+<form action="/login" method="POST">
+{% csrf_token %}
+<input type="text" name="username" placeholder="Username"><br><br>
+<input type="password" name="password" placeholder="Password"><br><br>
+<input type="submit" name="submit" value="Login"><br><br>
+Not Registered ? <a href="/register">Register</a>
+</div>
+</form>
+</body>
+</html>

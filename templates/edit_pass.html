@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Password</title>
+		<style type="text/css">
+		body{
+			font-family: sans-serif;
+		}
+		.main{
+			text-align: center;
+			width: 330px;
+			height: 280px;
+			margin: 100px auto;
+			background :tomato;
+			padding: 10px 20px;
+			box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+		}
+		input{
+			width: 260px;
+			height: 25px;
+			background-color: transparent;
+			border:none;
+			border-bottom: 1.5px solid #000;
+			color: black;
+			outline: none;
+
+
+		}
+		input::placeholder{
+			color: #000;
+		}
+		input[type="submit"]{
+			border:2px solid black;
+			width: 160px;
+			height: 35px;
+			border-radius: 15px;
+			margin-top: 10px;
+		}
+		a{
+			color: #000;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+<h2>Change Password</h2>
+{{ error }}
+<form action="/edit_pass" method="POST">
+{% csrf_token %}
+<input type="password" name="old_pass" required="" placeholder="Old Password"><br><br>
+<input type="password" name="new_pass" required="" placeholder="New Password"><br><br>
+<input type="password" name="confirm_pass" required="" placeholder="Confirm Password"><br><br>
+<input type="submit" name="submit" value="Change Password">
+</form>
+</div>
+</body>
+</html>
